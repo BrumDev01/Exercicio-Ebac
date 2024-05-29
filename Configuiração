@@ -9,16 +9,20 @@ Para depois inserir no carrinho
 Contexto:
 Dado que eu acesse a página de configuração do produto na EBAC-SHOP
 
-Cenário: Seleção de cor, tamanho e quantidade obrigatórios
-Quando eu tento adicionar o produto ao carrinho sem selecionar a cor
+Cenário: Seleção de cor obrigatória
+Quando eu tentar adicionar o produto ao carrinho sem selecionar a cor
 Então deve exibir uma mensagem de erro indicando que a seleção de cor é obrigatória
-E quando eu tento adicionar o produto ao carrinho sem selecionar o tamanho
+
+Cenário: Seleção de tamanho obrigatória
+Quando eu tentar adicionar o produto ao carrinho sem selecionar o tamanho
 Então deve exibir uma mensagem de erro indicando que a seleção de tamanho é obrigatória
-E quando eu tento adicionar o produto ao carrinho sem selecionar a quantidade
+
+Cenário: Seleção de quantidade obrigatória
+Quando eu tentar adicionar o produto ao carrinho sem selecionar a quantidade
 Então deve exibir uma mensagem de erro indicando que a seleção de quantidade é obrigatória
 
 Cenário: Limite de 10 produtos por venda
-Quando eu seleciono uma quantidade maior que 10
+Quando eu selecionar uma quantidade maior que 10
 Então deve exibir uma mensagem de erro indicando que o limite máximo de produtos por venda é 10
 
 Cenário: Limpar configurações do produto
@@ -26,15 +30,3 @@ Dado que eu configurei um produto com cor, tamanho e quantidade
 Quando eu clico no botão "limpar"
 Então as seleções de cor, tamanho e quantidade devem ser removidas
 E a página deve voltar ao estado original
-
-Esquema do Cenário: Seleção válida de cor, tamanho e quantidade
-Quando eu selecionar a cor "<cor>"
-E o tamanho "<tamanho>"
-E a quantidade "<quantidade>"
-Então eu devo conseguir adicionar o produto ao carrinho com sucesso
-
-Exemplos:
-| cor       | tamanho | quantidade |
-| vermelho  | M       | 1          |
-| azul      | G       | 5          |
-| preto     | P       | 10         |
