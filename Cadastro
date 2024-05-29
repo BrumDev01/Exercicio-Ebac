@@ -9,7 +9,7 @@ Contexto:
 Dado que estou na página de cadastro da EBAC-SHOP
 
 Cenário: Cadastro com todos os dados obrigatórios
-Quando eu preencher todos os campos obrigatórios marcados com asteriscos
+Quando eu preencher todos os campos obrigatórios
 Então devo conseguir concluir meu cadastro com sucesso
 
 Cenário: Cadastro com e-mail inválido
@@ -21,6 +21,11 @@ Quando eu tentar cadastrar com campos obrigatórios vazios
 Então deve exibir uma mensagem de alerta indicando que todos os campos obrigatórios devem ser preenchidos
 
 Esquema do Cenário: Preenchimento do Cadastro com Exemplos
+Dado que estou na página de cadastro da EBAC-SHOP
+Quando eu preencher o nome "<Nome>", o sobrenome "<Sobrenome>", o email "<Email>" e o telefone "<Telefone>"
+Então o cadastro deve ser processado corretamente
+
+Exemplos:
 | Nome     | Sobrenome | Email               | Telefone     |
-| Fulano   | de Tal    | fulano@example.com | (11) 1234-5678 |
+| Fulano   | de Tal    | fulano@example.com  | (11) 1234-5678 |
 | Beltrano | da Silva  | beltrano@example.com | (21) 9876-5432 |
