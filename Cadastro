@@ -1,0 +1,26 @@
+#language: pt
+
+Funcionalidade: Conclusão do Cadastro na EBAC-SHOP
+Como cliente da EBAC-SHOP
+Quero concluir meu cadastro
+Para finalizar minha compra
+
+Contexto:
+Dado que estou na página de cadastro da EBAC-SHOP
+
+Cenário: Cadastro com todos os dados obrigatórios
+Quando eu preencher todos os campos obrigatórios marcados com asteriscos
+Então devo conseguir concluir meu cadastro com sucesso
+
+Cenário: Cadastro com e-mail inválido
+Quando eu preencher o campo de e-mail com um formato inválido
+Então deve exibir uma mensagem de erro indicando que o formato do e-mail é inválido
+
+Cenário: Cadastro com campos vazios
+Quando eu tentar cadastrar com campos obrigatórios vazios
+Então deve exibir uma mensagem de alerta indicando que todos os campos obrigatórios devem ser preenchidos
+
+Esquema do Cenário: Preenchimento do Cadastro com Exemplos
+| Nome     | Sobrenome | Email               | Telefone     |
+| Fulano   | de Tal    | fulano@example.com | (11) 1234-5678 |
+| Beltrano | da Silva  | beltrano@example.com | (21) 9876-5432 |
